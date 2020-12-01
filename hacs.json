@@ -1,4 +1,5 @@
 {
   "name": "all-on-groups",
-  "country": "DE"
+  "country": "DE",
+  "render_readme": true
 }
