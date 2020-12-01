@@ -2,7 +2,7 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
-[Deconz] groups are exposed to Home Assistant with an 
+[Deconz](https://github.com/dresden-elektronik/deconz-rest-plugin) groups are exposed to Home Assistant with an 
 `all_on` attribute which indicates if all lights in a group
 are currently switched on.
 
