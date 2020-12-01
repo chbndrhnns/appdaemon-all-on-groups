@@ -14,3 +14,12 @@ attribute,
 - it adds a listener to update the state of the groups.
 
 
+## Configuration
+
+Add this snippet to your AppDaemon configuration file:
+
+```yaml
+all_on_sensors:
+  module: all_on_groups
+  class: AllOnGroups
+```
