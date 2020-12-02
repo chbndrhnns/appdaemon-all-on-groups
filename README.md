@@ -6,12 +6,13 @@
 `all_on` attribute which indicates if all lights in a group
 are currently switched on.
 
-This app exposes this attribute as an additional group. For this
+This app exposes this attribute as an additional binary_sensor. For this
 purpose, 
 - it looks for all light entities that have an `all_on` 
 attribute,
-- it creates a group with an `_all_on` suffix,
-- it adds a listener to update the state of the groups.
+- it creates a sensor with an `_all_on` suffix,
+- it adds a listener to update the state of the groups,
+- it removes the sensors on (AppDaemon) shutdown.
 
 
 ## Configuration
