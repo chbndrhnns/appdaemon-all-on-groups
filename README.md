@@ -19,7 +19,7 @@ attribute,
 Add this snippet to your AppDaemon configuration file:
 
 ```yaml
-all_on_sensors:
+all_on_groups:
   module: all_on_groups
   class: AllOnGroups
 ```
