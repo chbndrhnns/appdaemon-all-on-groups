@@ -4,6 +4,7 @@
 """
 
 __version__ = "0.8.3"
+
 from appdaemon.plugins.hass import hassapi as hass
 
 ATTRIBUTE_NAME = "all_on"
@@ -11,8 +12,9 @@ ALL_ON_SENSOR_SUFFIX = f"_{ATTRIBUTE_NAME}"
 APP_NAMESPACE = "default"
 ADMIN_NAMESPACE = "admin"
 CREATOR_KEY = "created_by"
+ASSIGNED_ENTITIES_KEY = "entity_id"
 CREATOR_VALUE = "AllOnGroups"
-TARGET_ENTITY_TYPE = "group"
+TARGET_ENTITY_TYPE = "binary_sensor"
 
 
 class ADEvents:
@@ -62,7 +64,8 @@ class AllOnGroups(hass.Hass):
             state=val,
             attributes={
                 "created_by": CREATOR_VALUE,
-                "name": f"All lights are on for {entity_id}"
+                "name": f"All lights are on for {entity_id}",
+                "entity_id": self.get_state(entity_id, attribute=ASSIGNED_ENTITIES_KEY, default="")
             }
         )
 
